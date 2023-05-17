@@ -12,8 +12,11 @@ def most_expensive(file_path: str) -> str:
     """
     m=open('data.json')
     x=json.load(m)
-    y=max(x.values())
-    return y
+    a=100000000000
+    for i in x.values():
+        if a>i:
+            a=i
+        return a
 
 
 # test
